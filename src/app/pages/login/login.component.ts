@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private http: HttpClient,
+    private loginService: LoginService
     ) { }
 
   ngOnInit(): void {

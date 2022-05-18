@@ -23,7 +23,7 @@
             <p class="login-box-msg">Iniciar Sesión</p>
 
             <!-- inicio formulario login -->
-            <form [formGroup]="form"  class="row g-3" method="post">
+            <form [formGroup]="form" (ngSubmit)="login($event)"  class="row g-3" method="post">
 
                 <!-- validacion usuario-->
                 <div class="input-group has-validation">

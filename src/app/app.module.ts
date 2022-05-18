@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ErrorGlobalComponent } from './pages/error-global/error-global.component';
+import { OlvidarComponent } from './pages/login/olvidar/olvidar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ErrorGlobalComponent } from './pages/error-global/error-global.componen
     HeaderComponent,
     InicioComponent,
     LoginComponent,
-    ErrorGlobalComponent
+    ErrorGlobalComponent,
+    OlvidarComponent
   ],
   imports: [
     BrowserModule,
