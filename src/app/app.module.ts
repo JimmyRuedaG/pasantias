@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { ErrorGlobalComponent } from './pages/error-global/error-global.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     HeaderComponent,
     HeaderComponent,
     InicioComponent,
-    LoginComponent
+    LoginComponent,
+    ErrorGlobalComponent
   ],
   imports: [
     BrowserModule,

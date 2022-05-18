@@ -16,7 +16,7 @@ import { environment } from 'src/environments/environment.prod';
 export class LoginComponent implements OnInit {
 
   form : FormGroup ;
-  // subRef$: Subscription;
+  subRef$: Subscription;
 
   constructor(
     private router: Router,
@@ -33,48 +33,20 @@ export class LoginComponent implements OnInit {
   }
 
   
-  // login(event: Event): void {
+  login(event: Event): void {
 
     // if (this.form.valid) {
-      // this.loginService.login(this.form.value.usuario, this.form.value.contraseña).subscribe(data => {
-      //   console.log(data);
-      //   sessionStorage.setItem(environment.TOKEN, data.access_token);
-      //   this.router.navigate(['/dashboard/inicio']);
-      // });
+    //   this.loginService.login(this.form.value.usuario, this.form.value.contraseña).subscribe(data => {
+    //     console.log(data);
+    //     sessionStorage.setItem(environment.TOKEN, data.access_token);
+    //     this.router.navigate(['/dashboard/inicio']);
+    //   });
     // } else {
     //   this.form.markAllAsTouched();
     // }
 
-  // }
+  }
 
-  // enviar() {
-
-  //   const usuarioLogin: Ilogin = {
-  //     user: this.form.value.usuario,
-  //     pass: this.form.value.contraseña,
-  //   };
-
-  //   let headers = new HttpHeaders(
-  //     { 'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'application/json', 'Access-Control-Allow-Origin': '*' }
-
-  //   );
-
-  //   let options = { headers: headers }
-
-  //   this.http.post<IResponse>('http://sinfanas03.myqnapcloud.com:9080/presupuestoBackEnd/v1/login',
-  //     usuarioLogin, options)
-  //     .subscribe(res => {
-  //       console.log("asdsadas")
-  //       const token = res.token
-  //       console.log('token', token)
-  //       sessionStorage.setItem('token', token)
-  //       this.router.navigate(['/dashboard']);
-  //     }, err => {
-        
-  //       console.log('error de login', err);
-  //     });
-  //   console.log(this.form.value);
-  // }
-
+  
 }
 
