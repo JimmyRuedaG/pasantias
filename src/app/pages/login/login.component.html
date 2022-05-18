@@ -1,0 +1,137 @@
+asdasdsa<!doctype html>
+
+<html lang="es">
+
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<body class="hold-transition login-page">
+    <!-- Login -->
+    <div class="login-box">
+
+        <!-- encabezado formulario -->
+        <div class="login-logo">
+            <a href="https://www.sinfa.com.co/"><b>Sinfa</b></a>
+        </div>
+
+        <!-- formulario de login -->
+        <div class="card-body login-card-body">
+
+            <p class="login-box-msg">Iniciar Sesión</p>
+
+            <!-- inicio formulario login -->
+            <form [formGroup]="form"  class="row g-3" method="post">
+
+                <!-- validacion usuario-->
+                <div class="input-group has-validation">
+
+                    <!-- valores de ingreso usuario-->
+                    <input type="text" class="form-control" [ngClass]="
+                            (form.get('usuario').touched ||
+                            form.get('usuario').dirty) &&
+                            form.get('usuario').hasError('required')
+                              ? 'is-invalid'
+                              : '' || form.get('usuario').hasError('minlength')
+                              ? 'is-invalid'
+                              : '' ||
+                              ((form.get('usuario').touched ||
+                              form.get('usuario').dirty) &&
+                              !form.get('usuario').invalid)
+                              ? 'is-valid'
+                              : ''" formControlName="usuario" placeholder="Usuario" required>
+
+                    <!-- icono -->
+                    <span class="input-group-text fa fa-user" id="inputGroupPrepend"></span>
+
+                    <!-- mensajes para invalidar usuario -->
+                    <div class="invalid-feedback">
+
+                        {{
+                        form.get("usuario").hasError("required")
+                        ? " Usuario Requerido "
+                        : ""
+                        }}
+                        {{
+                        form.get("usuario").hasError("minlength")
+                        ? "minimo 3 caracteres"
+                        : ""
+                        }}
+                    </div>
+
+                </div>
+
+                <!-- validacion contraseña -->
+                <div class="input-group has-validation">
+
+                    <!-- valores de ingreso contraseña -->
+                    <input type="password" class="form-control" [ngClass]="
+                        (form.get('contraseña').touched ||
+                        form.get('contraseña').dirty) &&
+                        form.get('contraseña').hasError('required')
+                          ? 'is-invalid'
+                          : '' || form.get('contraseña').hasError('minlength')
+                          ? 'is-invalid'
+                          : '' ||
+                          ((form.get('contraseña').touched ||
+                          form.get('contraseña').dirty) &&
+                          !form.get('contraseña').invalid)
+                          ? 'is-valid'
+                          : ''" formControlName="contraseña" placeholder="contraseña" required />
+
+                    <!-- icono -->
+                    <span class="input-group-text material-icons" id="inputGroupPrepend">lock_outline</span>
+
+                    <!-- mensajes para invalidar contraseña -->
+                    <div class="invalid-feedback">
+                        {{
+                        form.get("contraseña").hasError("required")
+                        ? " contraseña Requerida "
+                        : ""
+                        }}
+                        {{
+                        form.get("contraseña").hasError("minlength")
+                        ? " minimo 3 caracteres"
+                        : ""
+                        }}
+                    </div>
+
+                </div>
+
+                <!-- recuerdame e iniciar sesion -->
+                <div class="row">
+
+                    <!-- casilla recuerdame -->
+                    <div class="col-8">
+                        <div class="icheck-primary">
+                            <input type="checkbox" id="remember">
+                            <label for="remember" style="font-weight: normal;">
+                                &nbsp; recuérdame
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- boton inicio sesion -->
+                    <div class="col-12">
+                        <button class="btn btn-success btn-block" type="submit" [disabled]="form.invalid">Iniciar
+                            Sesión</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+            <!-- olvide mi contraseña -->
+            <p class="mb-1">
+                <a href="olvidar">Olvide mi contraseña</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
