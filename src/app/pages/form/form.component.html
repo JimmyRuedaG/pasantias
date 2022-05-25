@@ -1,0 +1,51 @@
+<body class="hold-transition login-page">
+
+    <div class="login-box ">
+
+        <div class="login-logo">
+            <a href="https://www.ucundinamarca.edu.co/"><b>UDEC</b></a>
+        </div>
+
+        <div class="card-body login-card-body">
+
+            <p class="login-box-msg"><strong>FORMULARIO</strong></p>
+
+            <form [formGroup]="form" (ngSubmit)="agregar()">
+
+                <div class="input-group has-validation">
+                    <input type="text" class="form-control" formControlName="correo" placeholder="correo" required />
+                </div>
+                <br>
+
+                <div class="input-group has-validation">
+                    <input type="text" class="form-control" formControlName="clave" placeholder="clave" required />
+                </div>
+                <br>
+
+                <div class="input-group has-validation">
+                    <input type="password" class="form-control" formControlName="imagen" placeholder="imagen"
+                        required />
+                </div>
+
+                <br>
+                <div class="input-group has-validation">
+                    <input type="text" class="form-control" formControlName="nombre" placeholder="nombre"
+                        required />
+                </div>
+                <br>
+
+
+                <div class="row">
+
+                    <div class="col-12">
+                        <button class="btn btn-success btn-block" [disabled]="form.invalid" type="submit">Subir</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</body>

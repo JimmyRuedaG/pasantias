@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -14,11 +15,11 @@ export class InicioComponent implements OnInit {
     private route: ActivatedRoute,
   ) { }
 
-  usuarios: any= ['','','','','','','','','','']
+  usuarios: any= []
 
   ngOnInit(): void {
 
-    // this.loginService.cargarUsuario()
+    // this.LoginService.cargarUsuario()
     //   .subscribe( resp => {
         
     //     console.log(resp.compania);

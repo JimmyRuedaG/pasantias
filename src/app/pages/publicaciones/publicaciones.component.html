@@ -1,0 +1,66 @@
+<body class="hold-transition sidebar-mini">
+    <div class="content-wrapper">
+
+        <!-- migas de pan y titulos -->
+        <section class="content-header">
+
+            <div class="container-fluid">
+
+                <div class="row mb-2">
+
+                    <!-- Titulo -->
+                    <div class="col-sm-6">
+                        <h1>Usuario</h1>
+                    </div>
+
+                    <!-- Migas de pan -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="dashboard">Inicio</a></li>
+                            <li class="breadcrumb-item active">Usuario</li>
+                        </ol>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <div class="row">
+            <div class="col">
+                <table class="table table-white">
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>url</th>
+                            <th>Tipo de oferta</th>
+                            <th>descripcion</th>
+                            <th>cantidad de vacantes</th>
+                            <th>id empresa</th>
+                            <th>Eliminar</th>
+                            <!-- <th>Editar</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let usuario of usuarios">
+                            <td>{{usuario.titulo}}</td>
+                            <td>{{usuario.url}}</td>
+                            <td>{{usuario.tipoOferta}}</td>
+                            <td>{{usuario.descripcion}}</td>
+                            <td>{{usuario.cantidad_Vacantes}}</td>
+                            <td>{{usuario.id_Empresa}}</td>
+                            <td>
+                                <a class="btn btn-danger btn-block col-10" (click)="eliminar(usuario.id)">Eliminar</a>
+                            </td>
+                            <!-- <td>
+                                <a class="btn btn-primary btn-block col-10" >Editar</a>
+                            </td> -->
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <a style="margin-left: 78%;" href="formulario" class="btn btn-success btn-block col-2" type="submit">agregar</a> -->
+
+            </div>
+        </div>
+    </div>
+</body>
